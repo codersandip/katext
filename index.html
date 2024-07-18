@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaTeX Integration Example</title>
+    <!-- Include KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .math-example {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>KaTeX Integration Example</h1>
+    <div class="math-example">
+        <p>Here is an inline math example: \( E = mc^2 \)</p>
+        <p>\[ \int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2} \]</p>
+    </div>
+    
+    <!-- Include KaTeX JS -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                // Options for auto-render
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false},
+                    {left: "\\[", right: "\\]", display: true}
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
